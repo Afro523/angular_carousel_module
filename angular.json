@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "angular-carousel-lib": {
+      "root": "projects/angular-carousel-lib",
+      "sourceRoot": "projects/angular-carousel-lib/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-carousel-lib/tsconfig.lib.json",
+            "project": "projects/angular-carousel-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-carousel-lib/src/test.ts",
+            "tsConfig": "projects/angular-carousel-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-carousel-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-carousel-lib/tsconfig.lib.json",
+              "projects/angular-carousel-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-carousel-lib-app"
