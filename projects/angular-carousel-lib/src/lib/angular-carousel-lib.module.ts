@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
   declarations: [AngularCarouselLibComponent],
   imports: [
     CommonModule,
-    BrowserModule
+    BrowserModule,
   ],
   exports: [AngularCarouselLibComponent]
 })

@@ -1,11 +1,11 @@
-<div class="container-fluid">
+<div #componentContainer class="component-container">
   <div class="row">
     <div #carouselContainer class="my-carousel-container">
       <div #arrowLeft class="arrow-container" (click)="rotateRight()">
         <i class="fas fa-chevron-left fa-5x"></i>
       </div>
-      <div *ngFor="let image of images; let i = index" #item class="my-carousel-item" (click)="chooseSlideDir(i)">
-        {{ image }}
+      <div *ngFor="let el of elmArr; let i = index" #item class="my-carousel-item" (click)="chooseSlideDir(i)">
+        {{ el }}
       </div>
       <div #arrowRight class="arrow-container" (click)="rotateLeft()">
         <i class="fas fa-chevron-right fa-5x"></i>
